@@ -1,9 +1,12 @@
 package day02;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class Ex01 {
-	public static void main(String []args) {
+	public static void main(String []args)throws IOException {
 		
 //		final String KOREA="대한민국";
 //		System.out.println(KOREA);
@@ -22,29 +25,49 @@ public class Ex01 {
 //		System.out.println("이름 : "+name+"\n나이 :" +age);
 		
 		
-		Scanner scan= new Scanner(System.in);
+//		Scanner scan= new Scanner(System.in);
+//		
+//		System.out.println("당신의 이름은 무엇입니까??");
+//		String name=scan.next();
+//		
+//		System.out.println("국어 점수 입력 :");
+//		double kor=scan.nextDouble();
+//		System.out.println("영어 점수 입력 :");
+//		double eng=scan.nextDouble();
+//		System.out.println("수학 점수 입력 :");
+//		double math=scan.nextDouble();
+//		
+//		double sum=kor+eng+math;
+//		
+//		System.out.println("===================");
+//		System.out.println("이름 :" + name);
+//		System.out.println("===================");
+//		System.out.println("국어 :" +kor);
+//		System.out.println("영어 :" +eng);
+//		System.out.println("수학 :" +math);
+//		System.out.println("===================");
+//		System.out.println("합계 :"+sum);
+//		System.out.println("===================");
 		
-		System.out.println("당신의 이름은 무엇입니까??");
-		String name=scan.next();
+		BufferedReader read =new BufferedReader(
+		new InputStreamReader(System.in));
 		
-		System.out.println("국어 점수 입력 :");
-		double kor=scan.nextDouble();
-		System.out.println("영어 점수 입력 :");
-		double eng=scan.nextDouble();
-		System.out.println("수학 점수 입력 :");
-		double math=scan.nextDouble();
+		System.out.println("종료 : 0");
 		
-		double sum=kor+eng+math;
+		while(true) {
+			String maple=read.readLine();
+			int exit=Integer.parseInt(read.readLine());
+			System.out.println(maple);
+			if(exit==0) {
+				break;
+			}
+		}
 		
-		System.out.println("===================");
-		System.out.println("이름 :" + name);
-		System.out.println("===================");
-		System.out.println("국어 :" +kor);
-		System.out.println("영어 :" +eng);
-		System.out.println("수학 :" +math);
-		System.out.println("===================");
-		System.out.println("합계 :"+sum);
-		System.out.println("===================");
+		
+		
+		
+		
+		
 		
 	}
 }
